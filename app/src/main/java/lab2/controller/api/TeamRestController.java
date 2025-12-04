@@ -202,7 +202,7 @@ public class TeamRestController {
                             schema = @Schema(implementation = ErrorResponse.class))
             )
     })
-    @PatchMapping(value = "/{id}", consumes = "application/merge-patch+json")
+    @PatchMapping(value = "/{id}/merge")
     public ResponseEntity<TeamDTO> patchTeamMergePatch(
             @Parameter(description = "Унікальний ідентифікатор команди", required = true)
             @PathVariable Long id,
@@ -251,7 +251,7 @@ public class TeamRestController {
                             schema = @Schema(implementation = ErrorResponse.class))
             )
     })
-    @PatchMapping(value = "/{id}", consumes = "application/json-patch+json")
+    @PatchMapping(value = "/{id}")
     public ResponseEntity<TeamDTO> patchTeamJsonPatch(
             @Parameter(description = "Унікальний ідентифікатор команди", required = true)
             @PathVariable Long id,

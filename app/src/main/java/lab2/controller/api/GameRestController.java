@@ -234,7 +234,7 @@ public class GameRestController {
                             schema = @Schema(implementation = ErrorResponse.class))
             )
     })
-    @PatchMapping(value = "/{id}", consumes = "application/merge-patch+json")
+    @PatchMapping(value = "/{id}/merge")
     public ResponseEntity<GameDTO> patchGameMergePatch(
             @Parameter(description = "Унікальний ідентифікатор гри", required = true)
             @PathVariable Long id,
@@ -306,7 +306,7 @@ public class GameRestController {
                             schema = @Schema(implementation = ErrorResponse.class))
             )
     })
-    @PatchMapping(value = "/{id}", consumes = "application/json-patch+json")
+    @PatchMapping(value = "/{id}")
     public ResponseEntity<GameDTO> patchGameJsonPatch(
             @Parameter(description = "Унікальний ідентифікатор гри", required = true)
             @PathVariable Long id,
